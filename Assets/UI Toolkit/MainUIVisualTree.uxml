@@ -1,3 +1,10 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1;" />
+    <Style src="project://database/Assets/UI%20Toolkit/MainStyleSheet.uss?fileID=7433441132597879392&amp;guid=c890b54a43b042f48bae723b0f30e5c1&amp;type=3#MainStyleSheet" />
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Button text="Load" name="Load" class="button" style="width: 256px; height: 128px; font-size: 54px; align-items: stretch; justify-content: flex-start; align-self: center; align-content: flex-start; top: 25%;" />
+        <ui:Button text="Save" name="Save" class="button" style="width: 256px; height: 128px; font-size: 54px; -unity-font-style: normal; align-self: center; top: 30%;" />
+        <ui:IntegerField value="42" name="IntValue" readonly="true" style="width: 82px; height: 64px; font-size: 30px; -unity-text-align: upper-center; left: 12%; top: 12%;" />
+        <ui:Button text="Increment" name="Increment" class="button" style="width: 154px; height: 64px; font-size: 24px; align-items: stretch; justify-content: flex-start; align-self: center; align-content: flex-start; top: 6%; left: -28%;" />
+        <ui:Button text="Decrement" name="Decrement" class="button" style="width: 154px; height: 54px; font-size: 24px; -unity-font-style: normal; align-self: center; top: 0%; left: -43%;" />
+    </ui:VisualElement>
 </ui:UXML>

@@ -6,7 +6,6 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
-using AmazingTool;
 using SFB;
 using UnityEngine;
 using UnityEngine.UIElements;

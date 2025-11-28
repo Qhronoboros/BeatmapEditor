@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml.Serialization;
-using AmazingTool;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -14,11 +13,11 @@ namespace AmazingTool_2025
 {
     public class SerializeUI : MonoBehaviour
     {
-        public TestData data;
-        public TestDataEditor dataEditor;
+        // public TestData data;
+        // public TestDataEditor dataEditor;
         public TextField fileNameTF;
 
-        ISerializationStrategy<TestData> serializer;
+        // ISerializationStrategy<TestData> serializer;
 
         // Start is called before the first frame update
         void Start()
@@ -42,7 +41,7 @@ namespace AmazingTool_2025
             // UI Selection Variable
             // switch ( variable ){
             // DataSystem theSystem = new DataSystem(new XmlStrategy<TestData>());
-            serializer = new XmlStrategy<TestData>();
+            // serializer = new XmlStrategy<TestData>();
             //}
         }
 
@@ -59,8 +58,8 @@ namespace AmazingTool_2025
 
         public void Create()
         {
-            data = new TestData();
-            dataEditor.SetData(ref data);
+            // data = new TestData();
+            // dataEditor.SetData(ref data);
         }
 
         public void Load()
@@ -75,10 +74,10 @@ namespace AmazingTool_2025
                 try
                 {
                     fstream = new FileStream(url, FileMode.Open);
-                    data = (TestData)serializer.Deserialize(fstream);
+                    // data = (TestData)serializer.Deserialize(fstream);
                     fstream.Close();
 
-                    dataEditor.SetData(ref data);
+                    // dataEditor.SetData(ref data);
                 }
                 catch (System.Exception e)
                 {
@@ -92,13 +91,13 @@ namespace AmazingTool_2025
             string fileName = fileNameTF.text;
             string url = Path.Combine(Application.persistentDataPath, fileName);
 
-            if (data != null)
+            // if (data != null)
             {
                 FileStream fstream = null;
                 try
                 {
                     fstream = new FileStream(url, FileMode.CreateNew);
-                    serializer.Serialize(fstream, data);
+                    // serializer.Serialize(fstream, data);
                     fstream.Close();
                 }
                 catch (System.Exception e)
