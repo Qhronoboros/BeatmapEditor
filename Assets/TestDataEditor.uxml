@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="TestDataEditor.uss" />
+    <ui:TextField picking-mode="Ignore" label="File Name" text="please enter a filename..." name="filename" style="height: 32px; -unity-text-outline-color: rgb(255, 255, 255); color: rgb(0, 0, 0); -unity-font-style: bold;" />
+    <ui:Button text="Create" display-tooltip-when-elided="true" name="create" style="width: 135px; white-space: nowrap; height: 18px;" />
+    <ui:Button text="Load" display-tooltip-when-elided="true" name="load" style="width: 135px; height: 18px;" />
+    <ui:Button text="Save" display-tooltip-when-elided="true" name="save" style="width: 135px; height: 18px;" />
+    <ui:IMGUIContainer name="---" style="border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 1px; padding-right: 1px; padding-top: 1px; padding-bottom: 1px; background-color: rgb(140, 140, 140); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;" />
+    <ui:IMGUIContainer name="data-editor">
+        <ui:TextField picking-mode="Ignore" label="name" value="filler text" text="filler text" name="name" style="color: rgb(0, 0, 0); -unity-font-style: bold;" />
+        <ui:TextField picking-mode="Ignore" label="int" value="0" text="0" name="int" style="color: rgb(0, 0, 0); -unity-font-style: bold;" />
+        <ui:TextField picking-mode="Ignore" label="float" value="0" text="0" name="float" style="color: rgb(0, 0, 0); -unity-font-style: bold;" />
+        <ui:ListView focusable="true" name="list" show-border="true" />
+    </ui:IMGUIContainer>
+</ui:UXML>
