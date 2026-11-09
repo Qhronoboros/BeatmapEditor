@@ -75,10 +75,10 @@ public class AudioWaveDisplay : MonoBehaviour {
 		waveformMaterial.SetInt("skipn", skipn);
 
 		// ! Add zoom in and out
-		if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.LeftArrow))
             offset = Mathf.Min(offset + 5 + skipn, _bufferSize - Screen.width / 2);
         
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.RightArrow))
             offset = Mathf.Max(offset - (5 + skipn), Screen.width / 2);
         
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
@@ -92,6 +92,12 @@ public class AudioWaveDisplay : MonoBehaviour {
 		// if (_samplesMaxed == null) return;
 		// Debug.Log($"Offset Location: {offset} with value {_samplesMaxed[offset]}");
 	}
+     
+    public void SetOffset(float value)
+    {
+        // Debug.Log((int)(value * _bufferSize));
+        offset = (int)(value * _bufferSize);
+    }
         
 	private void OnDestroy()
     {
