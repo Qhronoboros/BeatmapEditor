@@ -1,2 +1,8 @@
 .button {
 }
+
+.hide {
+    display: none;
+}
+
+

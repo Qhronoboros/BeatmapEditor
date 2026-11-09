@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
-public class UIController : MonoBehaviour
+public class UIController1 : MonoBehaviour
 {
     public Button saveButton, loadButton, incrementButton, decrementButton;
     public IntegerField integerValue;
