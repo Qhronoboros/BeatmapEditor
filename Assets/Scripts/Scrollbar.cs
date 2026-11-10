@@ -52,14 +52,6 @@ public class Scrollbar : MonoBehaviour
         }
     }
     
-
-    // On Click
-    // Save mouse offset from center of scrollbar
-    // Start following mouse x position (viewport so 0.0 to 1.0)
-    //  
-
-    // 
-
     private void OnPressed()
     {
         if (_pressed) return;
